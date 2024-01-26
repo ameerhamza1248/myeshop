@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="mystyle.css">
+<head>
+<body>
+  <div class="product">
+  {% for p in qs %}
+    <h2>{{p.name}}</h2>
+  <img src="{% static 'images/abc.jpeg' %}"width="200" height="250" alt="image">
+  <p>{{p.price}}</p>
+  <p>{{p.size_available}}</p>
+  <p>{{p.is_available}}</p>
+  </div>
+  {% endfor %}
+</body>
+</html>
